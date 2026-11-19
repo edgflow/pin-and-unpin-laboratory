@@ -8,6 +8,7 @@ use lab::lesson01_moves as l1;
 use lab::lesson02_self_referential as l2;
 use lab::lesson03_pin as l3;
 use lab::lesson04_unpin as l4;
+use lab::lesson05_phantom_pinned as l5;
 
 type Lesson = (&'static str, &'static str, fn());
 
@@ -16,6 +17,7 @@ const LESSONS: &[Lesson] = &[
     ("2", "A struct that points at itself", l2::run),
     ("3", "Pin: a promise about the pointee", l3::run),
     ("4", "Unpin and !Unpin", l4::run),
+    ("5", "PhantomPinned", l5::run),
 ];
 
 fn main() {
