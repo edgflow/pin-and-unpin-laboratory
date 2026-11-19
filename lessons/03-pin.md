@@ -127,7 +127,7 @@ They are not part of the build. Their real errors, shortened to the telling line
 
 ```text
 error[E0277]: `PhantomPinned` cannot be unpinned
-24 |     mem::swap(a.as_mut().get_mut(), b.as_mut().get_mut());
+26 |     mem::swap(a.as_mut().get_mut(), b.as_mut().get_mut());
    |                          ^^^^^^^ within `Frame`, the trait `Unpin` is not implemented for `PhantomPinned`
 note: required by a bound in `Pin::<&'a mut T>::get_mut`
 
