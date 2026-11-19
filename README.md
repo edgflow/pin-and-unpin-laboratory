@@ -30,6 +30,7 @@ $ cargo run --example parked_future_alias
 | 6 | `Pin<Box<T>>` and `BoxFuture` | [lessons/06-pin-box.md](lessons/06-pin-box.md) |
 | 7 | `Future::poll`, `Pending`, `Ready`, `Waker` | [lessons/07-future-poll.md](lessons/07-future-poll.md) |
 | 8 | The async state machine | [lessons/08-async-state-machine.md](lessons/08-async-state-machine.md) |
+| 9 | Pin projection | [lessons/09-pin-projection.md](lessons/09-pin-projection.md) |
 
 More lessons are added one at a time.
 
