@@ -1,11 +1,17 @@
-//! pin-and-unpin-laboratory: every lesson is a module with a `run`.
+//! Every lesson is a module with a `run`.
 //!
 //!   cargo run -- 1      runs lesson 1
 //!   cargo run           lists the lessons
-mod lesson01_moves;
+use pin_and_unpin_laboratory::{lesson01_moves, lesson02_self_referential};
 
-const LESSONS: [(&str, &str, fn()); 1] =
-    [("1", "What a move really is", lesson01_moves::run)];
+const LESSONS: [(&str, &str, fn()); 2] = [
+    ("1", "What a move really is", lesson01_moves::run),
+    (
+        "2",
+        "A struct that points at itself",
+        lesson02_self_referential::run,
+    ),
+];
 
 fn main() {
     let wanted = std::env::args().nth(1);

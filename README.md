@@ -14,11 +14,13 @@ build, with its real compiler error quoted in the write-up.
 $ cargo run            # lists the lessons
 $ cargo run -- 1       # runs lesson 1
 $ cargo test           # every lesson's tests
+$ cargo run --example address_stability
 ```
 
 | # | Lesson | Write-up |
 |---|---|---|
 | 1 | What a move really is | [lessons/01-moves.md](lessons/01-moves.md) |
+| 2 | A struct that points at itself | [lessons/02-self-referential.md](lessons/02-self-referential.md) |
 
 More lessons are added one at a time.
 
