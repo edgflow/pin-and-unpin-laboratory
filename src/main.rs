@@ -4,20 +4,18 @@
 //!   cargo run           lists the lessons
 use pin_and_unpin_laboratory as lab;
 
+use lab::lesson01_moves as l1;
+use lab::lesson02_self_referential as l2;
+use lab::lesson03_pin as l3;
+use lab::lesson04_unpin as l4;
+
 type Lesson = (&'static str, &'static str, fn());
 
 const LESSONS: &[Lesson] = &[
-    ("1", "What a move really is", lab::lesson01_moves::run),
-    (
-        "2",
-        "A struct that points at itself",
-        lab::lesson02_self_referential::run,
-    ),
-    (
-        "3",
-        "Pin: a promise about the pointee",
-        lab::lesson03_pin::run,
-    ),
+    ("1", "What a move really is", l1::run),
+    ("2", "A struct that points at itself", l2::run),
+    ("3", "Pin: a promise about the pointee", l3::run),
+    ("4", "Unpin and !Unpin", l4::run),
 ];
 
 fn main() {

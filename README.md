@@ -22,6 +22,7 @@ $ cargo run --example address_stability
 | 1 | What a move really is | [lessons/01-moves.md](lessons/01-moves.md) |
 | 2 | A struct that points at itself | [lessons/02-self-referential.md](lessons/02-self-referential.md) |
 | 3 | `Pin<P>`: a promise about the pointee | [lessons/03-pin.md](lessons/03-pin.md) |
+| 4 | `Unpin` and `!Unpin` | [lessons/04-unpin.md](lessons/04-unpin.md) |
 
 More lessons are added one at a time.
 
