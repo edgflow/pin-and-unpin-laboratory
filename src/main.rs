@@ -2,14 +2,21 @@
 //!
 //!   cargo run -- 1      runs lesson 1
 //!   cargo run           lists the lessons
-use pin_and_unpin_laboratory::{lesson01_moves, lesson02_self_referential};
+use pin_and_unpin_laboratory as lab;
 
-const LESSONS: [(&str, &str, fn()); 2] = [
-    ("1", "What a move really is", lesson01_moves::run),
+type Lesson = (&'static str, &'static str, fn());
+
+const LESSONS: &[Lesson] = &[
+    ("1", "What a move really is", lab::lesson01_moves::run),
     (
         "2",
         "A struct that points at itself",
-        lesson02_self_referential::run,
+        lab::lesson02_self_referential::run,
+    ),
+    (
+        "3",
+        "Pin: a promise about the pointee",
+        lab::lesson03_pin::run,
     ),
 ];
 
