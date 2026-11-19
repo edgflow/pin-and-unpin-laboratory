@@ -15,6 +15,7 @@ $ cargo run            # lists the lessons
 $ cargo run -- 1       # runs lesson 1
 $ cargo test           # every lesson's tests
 $ cargo run --example address_stability
+$ cargo run --example boxed_future
 ```
 
 | # | Lesson | Write-up |
@@ -24,6 +25,7 @@ $ cargo run --example address_stability
 | 3 | `Pin<P>`: a promise about the pointee | [lessons/03-pin.md](lessons/03-pin.md) |
 | 4 | `Unpin` and `!Unpin` | [lessons/04-unpin.md](lessons/04-unpin.md) |
 | 5 | `PhantomPinned` | [lessons/05-phantom-pinned.md](lessons/05-phantom-pinned.md) |
+| 6 | `Pin<Box<T>>` and `BoxFuture` | [lessons/06-pin-box.md](lessons/06-pin-box.md) |
 
 More lessons are added one at a time.
 

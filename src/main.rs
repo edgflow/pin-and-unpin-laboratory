@@ -9,6 +9,7 @@ use lab::lesson02_self_referential as l2;
 use lab::lesson03_pin as l3;
 use lab::lesson04_unpin as l4;
 use lab::lesson05_phantom_pinned as l5;
+use lab::lesson06_pin_box as l6;
 
 type Lesson = (&'static str, &'static str, fn());
 
@@ -18,6 +19,7 @@ const LESSONS: &[Lesson] = &[
     ("3", "Pin: a promise about the pointee", l3::run),
     ("4", "Unpin and !Unpin", l4::run),
     ("5", "PhantomPinned", l5::run),
+    ("6", "Pin<Box<T>> and BoxFuture", l6::run),
 ];
 
 fn main() {
