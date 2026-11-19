@@ -1,0 +1,10 @@
+[package]
+name = "pin-and-unpin-laboratory"
+version = "0.1.0"
+description = "Pin and Unpin, from a moving struct to async internals"
+edition = "2024"
+rust-version = "1.100"
+license = "MIT"
+publish = false
+
+[dependencies]

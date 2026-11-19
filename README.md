@@ -1,0 +1,26 @@
+# pin-and-unpin-laboratory
+
+`Pin` and `Unpin`, from a struct moving through memory to async internals.
+One type, a `Frame` read from a connection, is followed through the whole
+course: first as an ordinary struct, then with a pointer to itself, then
+pinned, then as a hand-written `Future`, and finally in a real asynchronous
+read.
+
+Every lesson is a module with a `run` function, a write-up in `lessons/`, and
+tests. Code that is meant NOT to compile lives in `invalid/`, outside the
+build, with its real compiler error quoted in the write-up.
+
+```console
+$ cargo run            # lists the lessons
+$ cargo run -- 1       # runs lesson 1
+$ cargo test           # every lesson's tests
+```
+
+| # | Lesson | Write-up |
+|---|---|---|
+| 1 | What a move really is | [lessons/01-moves.md](lessons/01-moves.md) |
+
+More lessons are added one at a time.
+
+Rust 1.100.0 (pinned in `rust-toolchain.toml`). Lessons with unsafe code are
+also checked under Miri: `cargo +nightly miri test`.
