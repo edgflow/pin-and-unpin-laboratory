@@ -31,8 +31,9 @@ $ cargo run --example parked_future_alias
 | 7 | `Future::poll`, `Pending`, `Ready`, `Waker` | [lessons/07-future-poll.md](lessons/07-future-poll.md) |
 | 8 | The async state machine | [lessons/08-async-state-machine.md](lessons/08-async-state-machine.md) |
 | 9 | Pin projection | [lessons/09-pin-projection.md](lessons/09-pin-projection.md) |
+| 10 | A real asynchronous read (the final project) | [lessons/10-real-world.md](lessons/10-real-world.md) |
 
-More lessons are added one at a time.
+Lesson 10 uses Tokio and talks only to a server it starts itself on `127.0.0.1`.
 
 Rust 1.100.0 (pinned in `rust-toolchain.toml`). Lessons with unsafe code are
 also checked under Miri: `cargo +nightly miri test`.

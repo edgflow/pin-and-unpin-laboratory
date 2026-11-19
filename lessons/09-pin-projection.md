@@ -9,7 +9,7 @@ $ cargo test lesson09
 $ cargo +nightly miri test lesson09      # this lesson has hand-written unsafe projections: Miri checks them
 ```
 
-This lesson adds the course's first dependency for a concept: `pin-project` 1.1.13, a small macro crate that
+This lesson adds the course's first dependency for a concept: `pin-project` (`"1.1.13"` in `Cargo.toml`, 1.2.0 in the lock file), a small macro crate that
 many async libraries build on.
 
 ## A · The problem
@@ -354,6 +354,6 @@ lessons are at work underneath?*
 - `Pin::get_ref`, `Pin::get_mut`, `Pin::as_mut`, `Pin::set`: https://doc.rust-lang.org/std/pin/struct.Pin.html
 - `Option::as_pin_mut`: https://doc.rust-lang.org/std/option/enum.Option.html#method.as_pin_mut
 - `std::task::ready!`: https://doc.rust-lang.org/std/task/macro.ready.html
-- `pin-project`: https://docs.rs/pin-project/1.1.13/pin_project/
+- `pin-project`: https://docs.rs/pin-project/
   (`#[pin_project]`, `#[pin]`, `#[pinned_drop]`)
 - `pin-project-lite`, the same idea without a procedural macro: https://docs.rs/pin-project-lite/

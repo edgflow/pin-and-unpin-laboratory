@@ -10,4 +10,5 @@ pub mod lesson06_pin_box;
 pub mod lesson07_future_poll;
 pub mod lesson08_async_state_machine;
 pub mod lesson09_pin_projection;
+pub mod lesson10_real_world;
 pub mod probe;
