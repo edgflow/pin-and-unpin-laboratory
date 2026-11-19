@@ -16,6 +16,7 @@ $ cargo run -- 1       # runs lesson 1
 $ cargo test           # every lesson's tests
 $ cargo run --example address_stability
 $ cargo run --example boxed_future
+$ cargo run --example custom_future
 ```
 
 | # | Lesson | Write-up |
@@ -26,6 +27,7 @@ $ cargo run --example boxed_future
 | 4 | `Unpin` and `!Unpin` | [lessons/04-unpin.md](lessons/04-unpin.md) |
 | 5 | `PhantomPinned` | [lessons/05-phantom-pinned.md](lessons/05-phantom-pinned.md) |
 | 6 | `Pin<Box<T>>` and `BoxFuture` | [lessons/06-pin-box.md](lessons/06-pin-box.md) |
+| 7 | `Future::poll`, `Pending`, `Ready`, `Waker` | [lessons/07-future-poll.md](lessons/07-future-poll.md) |
 
 More lessons are added one at a time.
 
