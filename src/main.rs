@@ -11,6 +11,7 @@ use lab::lesson04_unpin as l4;
 use lab::lesson05_phantom_pinned as l5;
 use lab::lesson06_pin_box as l6;
 use lab::lesson07_future_poll as l7;
+use lab::lesson08_async_state_machine as l8;
 
 type Lesson = (&'static str, &'static str, fn());
 
@@ -22,6 +23,7 @@ const LESSONS: &[Lesson] = &[
     ("5", "PhantomPinned", l5::run),
     ("6", "Pin<Box<T>> and BoxFuture", l6::run),
     ("7", "Future::poll, Pending, Ready, Waker", l7::run),
+    ("8", "The async state machine", l8::run),
 ];
 
 fn main() {

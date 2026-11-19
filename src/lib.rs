@@ -8,4 +8,5 @@ pub mod lesson04_unpin;
 pub mod lesson05_phantom_pinned;
 pub mod lesson06_pin_box;
 pub mod lesson07_future_poll;
+pub mod lesson08_async_state_machine;
 pub mod probe;

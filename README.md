@@ -17,6 +17,7 @@ $ cargo test           # every lesson's tests
 $ cargo run --example address_stability
 $ cargo run --example boxed_future
 $ cargo run --example custom_future
+$ cargo run --example parked_future_alias
 ```
 
 | # | Lesson | Write-up |
@@ -28,6 +29,7 @@ $ cargo run --example custom_future
 | 5 | `PhantomPinned` | [lessons/05-phantom-pinned.md](lessons/05-phantom-pinned.md) |
 | 6 | `Pin<Box<T>>` and `BoxFuture` | [lessons/06-pin-box.md](lessons/06-pin-box.md) |
 | 7 | `Future::poll`, `Pending`, `Ready`, `Waker` | [lessons/07-future-poll.md](lessons/07-future-poll.md) |
+| 8 | The async state machine | [lessons/08-async-state-machine.md](lessons/08-async-state-machine.md) |
 
 More lessons are added one at a time.
 

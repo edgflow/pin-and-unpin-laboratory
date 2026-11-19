@@ -56,6 +56,12 @@ impl Inbox {
         self.shared.lock().unwrap().asked > 0
     }
 
+    /// Is a future asleep on this inbox right now, with nothing to read?
+    pub fn is_waiting(&self) -> bool {
+        let shared = self.shared.lock().unwrap();
+        shared.waker.is_some() && shared.frame.is_none()
+    }
+
     /// Is a frame lying here that nobody has collected?
     pub fn has_frame(&self) -> bool {
         self.shared.lock().unwrap().frame.is_some()
@@ -71,6 +77,23 @@ impl Inbox {
         ForgetfulReadFrame {
             inbox: self.clone(),
         }
+    }
+
+    /// A network that sends several frames, each one only once a future
+    /// is asleep waiting for it.
+    pub fn feed(
+        &self,
+        frames: &'static [&'static str],
+    ) -> thread::JoinHandle<()> {
+        let inbox = self.clone();
+        thread::spawn(move || {
+            for frame in frames {
+                while !inbox.is_waiting() {
+                    thread::yield_now();
+                }
+                inbox.deliver(frame);
+            }
+        })
     }
 
     /// A network that answers a moment AFTER we started waiting.
